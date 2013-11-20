@@ -4,11 +4,15 @@ name := "publish-versioned-plugin"
 
 organization := "org.nlogo"
 
-version := "0.9-BOOTSTRAP"
+version := "1.0"
+
+isSnapshot := true
 
 licenses += ("Public Domain", url("http://creativecommons.org/licenses/publicdomain/"))
 
-bintrayPublishSettings
+seq(bintrayPublishSettings: _*)
+
+seq(PublishVersioned.settings: _*)
 
 bintray.Keys.repository in bintray.Keys.bintray := "publish-versioned"
 
