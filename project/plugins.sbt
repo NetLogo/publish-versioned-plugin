@@ -10,4 +10,4 @@ resolvers += Resolver.url(
     url("http://dl.bintray.com/content/netlogo/publish-versioned"))(
         Resolver.ivyStylePatterns)
 
-addSbtPlugin("org.nlogo" % "publish-versioned-plugin" % "0.9-BOOTSTRAP")
+addSbtPlugin("org.nlogo" % "publish-versioned-plugin" % "1.0")
