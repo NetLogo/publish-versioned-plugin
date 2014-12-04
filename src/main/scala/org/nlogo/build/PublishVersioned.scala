@@ -4,11 +4,15 @@ object Plugin extends Plugin {
 
   object PublishVersioned {
 
-    lazy val settings = Seq(commands ++= Seq(packageVersioned, publishVersioned, publishLocalVersioned))
+    lazy val settings = Seq(commands ++= Seq(packageVersioned, publishVersioned, publishLocalVersioned, packageVersionedCamel, publishVersionedCamel, publishLocalVersionedCamel))
 
     private def packageVersioned      = publishHelper("package-versioned",       packageKey   in Compile)
     private def publishVersioned      = publishHelper("publish-versioned",       publish      in Compile)
     private def publishLocalVersioned = publishHelper("publish-local-versioned", publishLocal in Compile)
+
+    private def packageVersionedCamel      = publishHelper("packageVersioned",      packageKey   in Compile)
+    private def publishVersionedCamel      = publishHelper("publishVersioned",      publish      in Compile)
+    private def publishLocalVersionedCamel = publishHelper("publishLocalVersioned", publishLocal in Compile)
 
     private def genVersion(isSnapshot: Boolean, version: String): String =
       if (!isSnapshot)
