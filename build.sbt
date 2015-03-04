@@ -1,5 +1,7 @@
 sbtPlugin := true
 
+scalaVersion := "2.10.5"
+
 name := "publish-versioned-plugin"
 
 organization := "org.nlogo"
