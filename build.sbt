@@ -6,7 +6,7 @@ name := "publish-versioned-plugin"
 
 organization := "org.nlogo"
 
-version := "1.1"
+version := "2.0"
 
 isSnapshot := true
 
