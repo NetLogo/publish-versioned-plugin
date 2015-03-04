@@ -3,11 +3,11 @@ resolvers += Resolver.url(
     url("http://dl.bintray.com/content/sbt/sbt-plugin-releases"))(
         Resolver.ivyStylePatterns)
 
-addSbtPlugin("me.lessis" % "bintray-sbt" % "0.1.2")
+addSbtPlugin("me.lessis" % "bintray-sbt" % "0.2.0")
 
 resolvers += Resolver.url(
   "publish-versioned-plugin-releases",
     url("http://dl.bintray.com/content/netlogo/publish-versioned"))(
         Resolver.ivyStylePatterns)
 
-addSbtPlugin("org.nlogo" % "publish-versioned-plugin" % "1.0")
+addSbtPlugin("org.nlogo" % "publish-versioned-plugin" % "1.1")
