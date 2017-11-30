@@ -1,21 +1,17 @@
 sbtPlugin := true
 
-scalaVersion := "2.10.5"
+scalaVersion := "2.12.4"
 
 name := "publish-versioned-plugin"
 
 organization := "org.nlogo"
 
-version := "2.0"
+version := "2.1"
 
 isSnapshot := true
 
 licenses += ("Public Domain", url("http://creativecommons.org/licenses/publicdomain/"))
 
-seq(bintrayPublishSettings: _*)
+bintrayRepository := "publish-versioned"
 
-seq(PublishVersioned.settings: _*)
-
-bintray.Keys.repository in bintray.Keys.bintray := "publish-versioned"
-
-bintray.Keys.bintrayOrganization in bintray.Keys.bintray := Some("netlogo")
+bintrayOrganization := Some("netlogo")

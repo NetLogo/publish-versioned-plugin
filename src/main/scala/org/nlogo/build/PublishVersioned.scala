@@ -1,5 +1,6 @@
 package org.nlogo.build
 
+import scala.sys.process.Process
 import sbt._, Keys.{ `package` => packageKey, _ }
 
 import sbt.complete.{ Parser, DefaultParsers }, Parser.success, DefaultParsers._
@@ -22,7 +23,7 @@ object PublishVersioned extends AutoPlugin {
     else {
       val isClean  = Process("git diff --quiet --exit-code HEAD").! == 0
       val dirtyStr = if (isClean) "" else "-dirty"
-      val sha      = Process("git rev-parse HEAD").lines.head take 7
+      val sha      = Process("git rev-parse HEAD").lineStream.head take 7
       s"$version-$sha$dirtyStr"
     }
 
