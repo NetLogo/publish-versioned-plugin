@@ -53,11 +53,11 @@ object PublishVersioned extends AutoPlugin {
       val extracted  = Project.extract(state).copy(currentRef = subproject)(Project.extract(state).showKey)
       val isSnap     = extracted.getOpt(isSnapshot).get.asInstanceOf[Boolean]
       val rawVersion = extracted.getOpt(version).get.asInstanceOf[String]
-      val evaluationState = extracted.append(
+      val evaluationState = extracted.appendWithoutSession(
         List(version := genVersion(isSnap, rawVersion)), state)
       Project.runTask(
         taskKey in subproject,
-        extracted.append(List(version := genVersion(isSnap, rawVersion)), state),
+        extracted.appendWithoutSession(List(version := genVersion(isSnap, rawVersion)), state),
         true
       )
       state
