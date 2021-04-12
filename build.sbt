@@ -10,7 +10,7 @@ version := "2.2"
 
 isSnapshot := true
 
-licenses += ("Public Domain", url("http://creativecommons.org/licenses/publicdomain/"))
+licenses += ("Creative Commons Zero v1.0 Universal Public Domain Dedication", url("https://creativecommons.org/publicdomain/zero/1.0/"))
 
 publishTo := { Some("Cloudsmith API" at "https://maven.cloudsmith.io/netlogo/publish-versioned/") }
 
