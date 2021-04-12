@@ -12,6 +12,8 @@ isSnapshot := true
 
 licenses += ("Public Domain", url("http://creativecommons.org/licenses/publicdomain/"))
 
-bintrayRepository := "publish-versioned"
+publishTo := { Some("Cloudsmith API" at "https://maven.cloudsmith.io/netlogo/publish-versioned/") }
 
-bintrayOrganization := Some("netlogo")
+credentials += Credentials(Path.userHome / ".sbt" / ".credentials")
+
+pomIncludeRepository := { x => false }
