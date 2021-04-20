@@ -29,3 +29,7 @@ Simply run the `package` SBT command to build a new version of the plugin `.jar`
 [![CC0](http://i.creativecommons.org/p/zero/1.0/88x31.png)](http://creativecommons.org/publicdomain/zero/1.0/)
 
 The publish-versioned plugin is in the public domain.  To the extent possible under law, Uri Wilensky has waived all copyright and related or neighboring rights.
+
+[![Hosted By: Cloudsmith](https://img.shields.io/badge/OSS%20hosting%20by-cloudsmith-blue?logo=cloudsmith&style=flat-square)](https://cloudsmith.com)
+
+Package repository hosting is graciously provided by [Cloudsmith](https://cloudsmith.com).
