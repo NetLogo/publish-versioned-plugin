@@ -13,7 +13,3 @@ isSnapshot := true
 licenses += ("Creative Commons Zero v1.0 Universal Public Domain Dedication", url("https://creativecommons.org/publicdomain/zero/1.0/"))
 
 publishTo := { Some("Cloudsmith API" at "https://maven.cloudsmith.io/netlogo/publish-versioned/") }
-
-credentials += Credentials(Path.userHome / ".sbt" / ".credentials")
-
-pomIncludeRepository := { x => false }
