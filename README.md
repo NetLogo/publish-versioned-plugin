@@ -1,8 +1,8 @@
 # publish-versioned Plugin
 
-This plugin provides a `publish-versioned` SBT console command, which performs `publish` with a dynamically-determined `version` string, relying up two SBT settings: `version` and `isSnapshot`.  If `isSnapshot` is `false`, your artifacts will be published using the original setting for `version`.  Otherwise, the plugin will call out to Git to determine the SHA of the current commit and append that to the version number, and will also append "-dirty" to the version number if the Git repo has uncommitted changes.
+This plugin provides a `publishVersioned` SBT console command, which performs `publish` with a dynamically-determined `version` string, relying up two SBT settings: `version` and `isSnapshot`.  If `isSnapshot` is `false`, your artifacts will be published using the original setting for `version`.  Otherwise, the plugin will call out to Git to determine the SHA of the current commit and append that to the version number, and will also append "-dirty" to the version number if the Git repo has uncommitted changes.
 
-There is also a `publish-local-versioned` for doing a similar thing with `publish-local` instead of `publish`, and a `package-versioned` for replacing `package`.
+There is also a `publishLocalVersioned` for doing a similar thing with `publish-local` instead of `publish`, and a `packageVersioned` for replacing `package`.
 
 ## Example Artifact Names
 
